@@ -11,8 +11,8 @@ def exponent(x:float) ->float:
         return answer
     
 def Ln(x:float) ->float:
-    i=1
-    y=1
+    i=0
+    y=0
     while (i < 100):
         y=y+(2*((x-exponent(y))/(x+exponent(y))))
         i=i+1
