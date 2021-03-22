@@ -1,4 +1,4 @@
-def exponent(x):
+def exponent(x:float) ->float:
     i=1
     numerator=1
     assembly = 1
@@ -10,7 +10,7 @@ def exponent(x):
         i=i+1
         return answer
     
-def Ln(x):
+def Ln(x:float) ->float:
     i=1
     y=1
     while (i < 100):
@@ -18,7 +18,7 @@ def Ln(x):
         i=i+1
     return y
 
-def XtimesY(x,y):
+def XtimesY(x:float,y: float) -> float:
     if x>0:
         sum_= exponent(y*Ln(x))
         return sum_
@@ -31,19 +31,14 @@ def XtimesY(x,y):
             sum_= exponent(y*Ln(x))
             return ((-1)*sum_)
 
-def sqrt(x,y):
+def sqrt(x:float,y:float) -> float:
     sqr_= XtimesY(x,(1/y))
     return sqr_
 
-def calculate(x):
+def calculate(x: float) -> float:
     sum_num = (XtimesY(2.71828182846, x)*XtimesY(7, x)*XtimesY(x,-1))
     return float('%0.6f' % sum_num)
 
-try:
-    x=float(input('plz enetr number:'))
-    print(calculate(x))
-except:
-    print(int(0))
 
 
 
